@@ -3,34 +3,115 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  --main-orange: hsl(25, 97%, 53%);
   --light-grey: hsl(217, 12%, 63%);
   --medium-grey: hsl(216, 12%, 54%);
   --dark-blue: hsl(213, 19%, 18%);
   --very-dark-blue: hsl(216, 12%, 8%);
 }
 
+/* ------------------------------------ Rating card ---------------------------------------- */
+
 .container{
-  max-width: 23rem;
+  max-width: 20rem;
   background: linear-gradient(var(--dark-blue), var(--very-dark-blue));
   border-radius: 20px;
-  padding: 4rem 2rem;
+  padding: 2rem;
   text-align: left;
 }
 
+h1 {
+  margin: 0;
+}
+
 .rating-text {
-  /* padding: 0 7rem; */
   margin: 0 0 2rem 0;
 }
 
 .submit-btn {
-  background-color: hsl(25, 97%, 53%);
-  padding: 0.6rem 8rem;
+  width: 100%;
+  background-color: var(--main-orange);
+  padding: 0.6rem 0;
   border-radius: 25px;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: 1s ;
+  font-family: "Overpass";
+}
+
+.submit-btn:hover {
+  color: var(--main-orange);
+  background-color: #fff;
 }
 
 .star-container img {
   padding: 0.7rem;
   border-radius: 20px;
   background-color: rgb(38,48,57)
+}
+
+.rating__dots {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  transition: 0.5s ease-in-out;
+}
+
+.rating__dot--container {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  background-color: rgb(38, 47, 56)
+}
+
+.rating__dot--container:hover {
+  background-color: var(--light-grey);
+}
+.selected__dot:hover,
+.selected__dot {
+  background-color: var(--main-orange);
+}
+
+/* ------------------------------------ Thank you card ---------------------------------------- */
+
+.container.thanks {
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.thanks__hero--container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: var(--main-orange);
+}
+
+.thanks__hero--images {
+  display: flex;
+}
+
+.repeat__icon {
+  max-width: 20px;
+  max-height: 20px;
+  cursor: pointer;
+}
+
+.total__rating {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: hsl(210, 19%, 18%);
+}
+
+.thanks__body {
+  margin-top: 1rem;
+}
+
+.thanks__body h1{
+  margin-bottom: 1rem;
+}
+
+.thanks__text {
+  margin: 0;
 }
